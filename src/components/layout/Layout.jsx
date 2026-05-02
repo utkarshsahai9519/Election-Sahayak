@@ -26,7 +26,7 @@ const Layout = () => {
       </main>
 
       <footer className="p-6 text-center text-sm text-slate-600 dark:text-slate-400 flex flex-col items-center gap-2 border-none mt-auto">
-        <p className="text-sm font-medium text-slate-700 dark:text-slate-300 bg-saffron-50/50 px-3 py-1 rounded-full border border-saffron-200/30">
+        <p className="text-sm font-bold text-slate-900 dark:text-slate-200 bg-saffron-100/50 px-4 py-1 rounded-full border border-saffron-300/30 shadow-sm">
           {t.change_lang_guide}
         </p>
         <div className="flex items-center gap-2 font-black text-slate-800 dark:text-white mt-2">
