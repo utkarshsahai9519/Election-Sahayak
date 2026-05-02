@@ -2,35 +2,36 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #f8fafc;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  background: #f8fafc;
+  color: #0f172a;
+}
+
 @layer base {
-  :root {
-    --bg-primary: #f8fafc;
-    --text-primary: #1e293b;
-    --text-secondary: #475569;
-    --accent: #FF9933; /* Saffron */
-    --accent-glow: rgba(255, 153, 51, 0.4);
-  }
-
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --bg-primary: #0f172a;
-      --text-primary: #f1f5f9;
-      --text-secondary: #cbd5e1;
-      --accent: #ffb366;
-      --accent-glow: rgba(255, 179, 102, 0.3);
-    }
-  }
-
   body {
-    background-color: #fffaf0;
-    /* Rich Solid Tricolor Gradient */
-    background-image: 
-      linear-gradient(135deg, rgba(255, 153, 51, 0.1) 0%, rgba(255, 255, 255, 0.9) 50%, rgba(19, 136, 8, 0.1) 100%);
-    background-attachment: fixed;
+    @apply bg-slate-50 dark:bg-slate-950;
     position: relative;
   }
 
-  /* Gods Doodle Pattern (WhatsApp Style) */
+  /* Gods & Multi-cultural Doodle Pattern */
   body::before {
     content: "";
     position: fixed;
@@ -38,25 +39,35 @@
     left: 0;
     width: 100%;
     height: 100%;
-    opacity: 0.15;
+    opacity: 0.25; /* Slightly lighter as requested */
     z-index: -1;
     pointer-events: none;
     background-image: url("/bg-doodle.png");
     background-repeat: repeat;
-    background-size: 400px; /* Adjust size to look like a doodle pattern */
+    background-size: 400px;
   }
 }
 
 @layer utilities {
   .glass-panel {
-    @apply bg-white/90 dark:bg-slate-900/90 backdrop-blur-sm border border-white/40 dark:border-slate-700/60 shadow-xl;
+    @apply bg-saffron-50/95 dark:bg-slate-900/95 backdrop-blur-none border shadow-lg;
+    border-color: #ffedd5; /* saffron-100 */
   }
   
   .glass-button {
-    @apply bg-white/80 dark:bg-slate-800/80 backdrop-blur-md border border-white/30 dark:border-slate-700/50 shadow-sm hover:shadow-md transition-all;
+    @apply bg-white/90 dark:bg-slate-800/90 border shadow-sm hover:bg-saffron-50 transition-all;
+    border-color: #fed7aa; /* saffron-200 */
   }
 
   .tricolor-bar {
-    @apply h-1.5 w-full bg-gradient-to-r from-saffron-500 via-white to-indiagreen-500;
+    @apply h-1 w-full bg-gradient-to-r from-saffron-500 via-white to-indiagreen-500;
   }
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
