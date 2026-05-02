@@ -22,16 +22,38 @@ const genAI = new GoogleGenerativeAI(key);
 
 app.post('/api/chat', async (req, res) => {
   try {
-    const { prompt, locationContext, language } = req.body;
+    const { prompt, locationContext, language, userInfo } = req.body;
 
     const constituency = locationContext?.constituency || 'Unknown';
     const state = locationContext?.state || 'Unknown';
     const preferredLanguage = language || 'English';
+    const userName = userInfo?.name || 'Citizen';
+    
+    // Simple age calculation
+    let isElderly = false;
+    if (userInfo?.dob) {
+      const birthDate = new Date(userInfo.dob);
+      const today = new Date();
+      let age = today.getFullYear() - birthDate.getFullYear();
+      const m = today.getMonth() - birthDate.getMonth();
+      if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+        age--;
+      }
+      isElderly = age >= 60;
+    }
 
-    // Strict system prompt for an elderly user
-    const systemInstruction = `You are 'Election Sahayak', a highly respectful and helpful assistant for Indian citizens. Speak very simply, respectfully, and clearly, as if explaining to an elderly citizen who may not be very tech-savvy. You MUST respond ONLY in ${preferredLanguage}. Do not use complex jargon. Be polite, patient, and use culturally appropriate respectful greetings if suitable. The user is asking about elections, and they are located in the constituency of ${constituency}, ${state}. Provide direct, localized, and simple answers. Keep it brief and comforting.`;
+    // Dynamic system prompt based on age and name
+    let systemInstruction = `You are 'Election Sahayak', a highly respectful and helpful assistant for Indian citizens. Speak ONLY in ${preferredLanguage}. 
+    The user's name is ${userName}. Always greet them respectfully by name. 
+    The user is located in the constituency of ${constituency}, ${state}. Provide direct, localized answers.`;
 
-    const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
+    if (isElderly) {
+      systemInstruction += `\nCRITICAL: The user is an elderly citizen. You MUST speak very simply, respectfully, and clearly. Avoid any technical jargon. Be extremely patient and use comforting, polite language. Use culturally appropriate respectful greetings.`;
+    } else {
+      systemInstruction += `\nCRITICAL: The user is a younger citizen. You should be professional, efficient, and clear. Provide detailed but concise information without over-simplifying, while maintaining a polite tone.`;
+    }
+
+    const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
     const result = await model.generateContent(`${systemInstruction}\n\nUser: ${prompt}`);
     const responseText = result.response.text();

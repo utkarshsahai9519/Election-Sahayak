@@ -9,14 +9,12 @@ const Layout = () => {
   return (
     <div className="min-h-screen flex flex-col transition-colors duration-300">
       <div className="tricolor-bar"></div>
-      <header className="glass-panel sticky top-0 z-50 px-4 py-3 flex justify-between items-center border-b-2 border-saffron-500">
+      <header className="glass-panel sticky top-0 z-50 px-4 py-3 flex justify-between items-center border-b-2 border-saffron-500/20 shadow-sm">
         <button 
           onClick={() => navigate('/step1')}
-          className="flex items-center gap-3 hover:opacity-80 transition-opacity text-left"
+          className="flex items-center gap-3 hover:opacity-80 transition-opacity text-left cursor-pointer active:scale-95"
         >
-          <div className="bg-white p-1 rounded-lg shadow-sm border border-slate-100">
-            <img src="/logo.png" alt="Election Sahayak Logo" className="h-10 w-10 min-w-[40px] object-contain" />
-          </div>
+          <img src="/logo.png" alt="Election Sahayak Logo" className="h-10 w-10 min-w-[40px] object-contain" />
           <h1 className="text-lg sm:text-xl font-extrabold text-slate-800 dark:text-white tracking-tight leading-tight">
             Election Sahayak
           </h1>
@@ -27,12 +25,16 @@ const Layout = () => {
         <Outlet />
       </main>
 
-      <footer className="p-4 text-center text-sm text-slate-500 dark:text-slate-400 flex flex-col items-center gap-2 border-t border-slate-100 dark:border-slate-800">
-        <p className="text-xs italic opacity-75">{t.change_lang_guide}</p>
-        <div className="flex items-center gap-1 font-bold text-slate-400">
-          <span>IND</span>
+      <footer className="p-6 text-center text-sm text-slate-600 dark:text-slate-400 flex flex-col items-center gap-2 border-none mt-auto">
+        <p className="text-sm font-medium text-slate-700 dark:text-slate-300 bg-saffron-50/50 px-3 py-1 rounded-full border border-saffron-200/30">
+          {t.change_lang_guide}
+        </p>
+        <div className="flex items-center gap-2 font-black text-slate-800 dark:text-white mt-2">
+          <span className="tracking-[0.2em] border-x-2 border-slate-800 px-2">IND</span>
         </div>
-        <div>&copy; {new Date().getFullYear()} Election Sahayak</div>
+        <div className="text-xs font-bold text-slate-500 uppercase tracking-widest mt-1">
+          &copy; 2026 Election Sahayak
+        </div>
       </footer>
     </div>
   );

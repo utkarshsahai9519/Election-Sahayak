@@ -7,38 +7,29 @@ const Step1_Language = () => {
   const { updateLanguage, t } = useTranslation();
 
   const languages = [
-    { name: 'English', native: 'English' },
-    { name: 'हिंदी', native: 'हिंदी' },
-    { name: 'অসমীয়া', native: 'অসমীয়া' },
-    { name: 'বাংলা', native: 'বাংলা' },
-    { name: 'ગુજરાતી', native: 'ગુજરાતી' },
-    { name: 'ಕನ್ನಡ', native: 'ಕನ್ನಡ' },
-    { name: 'മലയാളം', native: 'മലയാളം' },
-    { name: 'मराठी', native: 'मराठी' },
-    { name: 'ਪੰਜਾਬੀ', native: 'ਪੰਜਾਬੀ' },
-    { name: 'தமிழ்', native: 'தமிழ்' },
-    { name: 'తెలుగు', native: 'తెలుగు' },
-    { name: 'اردو', native: 'اردو' }
+    'English', 'हिंदी', 'অসমীয়া', 'বাংলা', 'ગુજરાતી', 'ಕನ್ನಡ', 'മലയാളം', 'मराठी', 'ਪੰਜਾਬੀ', 'தமிழ்', 'తెలుగు', 'اردو',
+    'बड़ो', 'डोगरी', 'कॉशुर', 'कोंकणी', 'मैथिली', 'ꯃꯤꯇꯩꯂꯣꯟ', 'नेपाली', 'ଓଡ଼ିଆ', 'संस्कृतम्', 'ᱥᱟᱱᱛᱟᱲᱤ', 'सिन्धी'
   ];
 
-  const handleLanguageSelect = (langName) => {
-    updateLanguage(langName);
-    navigate('/step2');
+  const handleLanguageSelect = (lang) => {
+    updateLanguage(lang);
+    navigate('/step1.5');
   };
 
   return (
     <div className="w-full flex flex-col items-center animate-in fade-in slide-in-from-bottom-4 duration-500">
-      <h2 className="text-3xl font-bold mb-2 text-center text-navyblue-600 dark:text-navyblue-400">{t.choose_language}</h2>
-      <p className="text-slate-500 mb-8 text-center">{t.select_language_desc || 'Select a language to get started'}</p>
-      
-      <div className="grid grid-cols-2 gap-4 w-full">
+      <h2 className="text-2xl font-bold mb-6 text-center text-slate-900 dark:text-white">{t.choose_language}</h2>
+      <p className="text-slate-600 dark:text-slate-300 mb-8 text-center">
+        {t.select_language_desc}
+      </p>
+      <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 w-full overflow-y-auto max-h-[400px] p-2 scrollbar-thin scrollbar-thumb-saffron-200">
         {languages.map((lang) => (
-          <button 
-            key={lang.name}
-            className="glass-button py-6 rounded-xl text-lg font-bold hover:scale-[1.02] active:scale-[0.98] transition-all border-b-4 border-b-saffron-500"
-            onClick={() => handleLanguageSelect(lang.name)}
+          <button
+            key={lang}
+            onClick={() => handleLanguageSelect(lang)}
+            className="glass-button py-3 rounded-lg text-md font-medium hover:bg-[#ffedd5] dark:hover:bg-slate-700 focus:ring-2 focus:ring-saffron-500 focus:outline-none transition-all"
           >
-            {lang.native}
+            {lang}
           </button>
         ))}
       </div>

@@ -1,29 +1,38 @@
-import { useState } from 'react';
+import { useState, useCallback } from 'react';
 
 export const useVertexAI = () => {
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
 
-  const generateText = async (prompt, locationContext) => {
+  const generateText = useCallback(async (prompt, locationContext = null) => {
     setLoading(true);
+    setError(null);
+    const language = localStorage.getItem('electionSahayakLang') || 'English';
+    const userInfo = {
+      name: localStorage.getItem('electionSahayakName'),
+      dob: localStorage.getItem('electionSahayakDOB')
+    };
+    
     try {
-      // Get language from localStorage
-      const language = localStorage.getItem('electionSahayakLang') || 'English';
-
       const response = await fetch('/api/chat', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ prompt, locationContext, language })
+        body: JSON.stringify({ prompt, locationContext, language, userInfo })
       });
-      
-      const data = await response.json();
-      return data.text;
-    } catch (e) {
-      console.error(e);
-      throw e;
-    } finally {
-      setLoading(false);
-    }
-  };
 
-  return { generateText, loading };
+      if (!response.ok) {
+        throw new Error('Failed to generate response from server');
+      }
+
+      const data = await response.json();
+      setLoading(false);
+      return data.text;
+    } catch (err) {
+      setLoading(false);
+      setError(err.message || 'An error occurred');
+      throw err;
+    }
+  }, []);
+
+  return { generateText, loading, error };
 };

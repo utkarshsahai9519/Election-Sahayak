@@ -28,11 +28,19 @@ export const translations = {
     skip_btn: "Skip for now",
     text_chat: "Text Chat",
     change_lang_guide: "Click 'Election Sahayak' above to change language",
+    personal_info_title: "Tell us about yourself",
+    personal_info_desc: "This helps us provide personalized election assistance.",
+    name_label: "Full Name",
+    dob_label: "Date of Birth",
+    voter_id_label: "Voter ID Number (Optional)",
+    name_placeholder: "e.g. Ramesh Kumar",
+    dob_placeholder: "DD/MM/YYYY",
+    voter_id_placeholder: "ABC1234567"
   },
   'हिंदी': {
     title: "चुनाव सहायक",
-    choose_language: "भाषा चुनें",
-    continue: "आगे बढ़ें",
+    choose_language: "अपनी भाषा चुनें",
+    continue: "जारी रखें",
     share_location: "स्थान साझा करें",
     select_manually: "मैन्युअल रूप से चुनें",
     identity_title: "पहचान सत्यापित करें",
@@ -52,6 +60,14 @@ export const translations = {
     biometric_btn: "फिंगरप्रिंट / फेस आईडी",
     skip_btn: "अभी छोड़ें",
     change_lang_guide: "भाषा बदलने के लिए ऊपर 'चुनाव सहायक' पर क्लिक करें",
+    personal_info_title: "अपने बारे में बताएं",
+    personal_info_desc: "इससे हमें आपको व्यक्तिगत चुनाव सहायता प्रदान करने में मदद मिलती है।",
+    name_label: "पूरा नाम",
+    dob_label: "जन्म तिथि",
+    voter_id_label: "वोटर आईडी नंबर (वैकल्पिक)",
+    name_placeholder: "जैसे: रमेश कुमार",
+    dob_placeholder: "DD/MM/YYYY",
+    voter_id_placeholder: "ABC1234567"
   },
   'অসমীয়া': {
     title: "নিৰ্বাচন সহায়ক",
@@ -60,8 +76,9 @@ export const translations = {
     share_location: "অৱস্থান শ্বেয়াৰ কৰক",
     select_manually: "নিজে বাছনি কৰক",
     identity_title: "পৰিচয় পৰীক্ষা",
-    biometric_btn: "বায়মেট্ৰিক",
-    skip_btn: "এতিয়া বাদ দিয়ক",
+    personal_info_title: "আপোনাৰ বিষয়ে কওক",
+    name_label: "সম্পূৰ্ণ নাম",
+    dob_label: "জন্মৰ তাৰিখ"
   },
   'বাংলা': {
     title: "নির্বাচন সহায়ক",
@@ -70,8 +87,9 @@ export const translations = {
     share_location: "অবস্থান শেয়ার করুন",
     select_manually: "নিজে নির্বাচন করুন",
     identity_title: "পরিচয় যাচাই করুন",
-    biometric_btn: "বায়োমেট্রিক",
-    skip_btn: "এখন বাদ দিন",
+    personal_info_title: "আপনার সম্পর্কে বলুন",
+    name_label: "পুরো নাম",
+    dob_label: "জন্ম তারিখ"
   },
   'ગુજરાતી': {
     title: "ચૂંટણી સહાયક",
@@ -80,18 +98,20 @@ export const translations = {
     share_location: "લોકેશન શેર કરો",
     select_manually: "મેન્યુઅલી પસંદ કરો",
     identity_title: "ઓળખ ચકાસો",
-    biometric_btn: "બાયોમેટ્રિક",
-    skip_btn: "હમણાં જ છોડો",
+    personal_info_title: "તમારા વિશે જણાવો",
+    name_label: "પૂરું નામ",
+    dob_label: "જન્મ તારીખ"
   },
   'ಕನ್ನಡ': {
     title: "ಚುನಾವಣಾ ಸಹಾಯಕ",
     choose_language: "ಭಾಷೆಯನ್ನು ಆಯ್ಕೆಮಾಡಿ",
     continue: "ಮುಂದುವರಿಸಿ",
-    share_location: "ಸ್ಥಳವನ್ನು ಹಂಚಿಕೊಳ್ಳಿ",
+    share_location: "ಸ್ಥಳವನ್ನು ಹಂಚಿಕೊಳ್ಳి",
     select_manually: "ಹಸ್ತಚಾಲಿತವಾಗಿ ಆಯ್ಕೆಮಾಡಿ",
     identity_title: "ಗುರುತನ್ನು ದೃಢೀಕರಿಸಿ",
-    biometric_btn: "ಬಯೋಮೆಟ್ರಿಕ್",
-    skip_btn: "ಈಗ ಬಿಟ್ಟುಬಿಡಿ",
+    personal_info_title: "ನಿಮ್ಮ ಬಗ್ಗೆ ತಿಳಿಸಿ",
+    name_label: "ಪೂರ್ಣ ಹೆಸರು",
+    dob_label: "ಹುಟ್ಟಿದ ದಿನಾಂಕ"
   },
   'മലയാളം': {
     title: "തിരഞ്ഞെടുപ്പ് സഹായി",
@@ -100,8 +120,9 @@ export const translations = {
     share_location: "ലൊക്കേഷൻ പങ്കിടുക",
     select_manually: "സ്വമേധയാ തിരഞ്ഞെടുക്കുക",
     identity_title: "തിരിച്ചറിയൽ രേഖ ഉറപ്പാക്കുക",
-    biometric_btn: "ബയോമെട്രിക്",
-    skip_btn: "ഇപ്പോൾ ഒഴിവാക്കുക",
+    personal_info_title: "നിങ്ങളെക്കുറിച്ച് പറയുക",
+    name_label: "മുഴുവൻ പേര്",
+    dob_label: "ജനന തീയതി"
   },
   'मराठी': {
     title: "निवडणूक सहाय्यक",
@@ -110,8 +131,9 @@ export const translations = {
     share_location: "स्थान शेअर करा",
     select_manually: "मॅन्युअली निवडा",
     identity_title: "ओळख सत्यापित करा",
-    biometric_btn: "बायोमेट्रिक",
-    skip_btn: "आत्ताच सोडून द्या",
+    personal_info_title: "तुमच्याबद्दल माहिती द्या",
+    name_label: "पूर्ण नाव",
+    dob_label: "जन्म तारीख"
   },
   'ਪੰਜਾਬੀ': {
     title: "ਚੋਣ ਸਹਾਇਕ",
@@ -120,8 +142,9 @@ export const translations = {
     share_location: "ਸਥਾਨ ਸਾਂਝਾ ਕਰੋ",
     select_manually: "ਮੈਨੂਅਲੀ ਚੁਣੋ",
     identity_title: "ਪਛਾਣ ਦੀ ਪੁਸ਼ਟੀ ਕਰੋ",
-    biometric_btn: "ਬਾਇਓਮੈਟ੍ਰਿਕ",
-    skip_btn: "ਹੁਣੇ ਛੱਡੋ",
+    personal_info_title: "ਆਪਣੇ ਬਾਰੇ ਦੱਸੋ",
+    name_label: "ਪੂਰਾ ਨਾਮ",
+    dob_label: "ਜਨਮ ਤਾਰੀਖ"
   },
   'தமிழ்': {
     title: "தேர்தல் உதவியாளர்",
@@ -130,8 +153,9 @@ export const translations = {
     share_location: "இருப்பிடத்தைப் பகிரவும்",
     select_manually: "கைமுறையாகத் தேர்ந்தெடுக்கவும்",
     identity_title: "அடையாளத்தைச் சரிபார்க்கவும்",
-    biometric_btn: "பயோமெட்ரிக்",
-    skip_btn: "இப்போது தவிர்க்கவும்",
+    personal_info_title: "உங்களைப் பற்றி சொல்லுங்கள்",
+    name_label: "முழு பெயர்",
+    dob_label: "பிறந்த தேதி"
   },
   'తెలుగు': {
     title: "ఎన్నికల సహాయకుడు",
@@ -140,8 +164,9 @@ export const translations = {
     share_location: "స్థానాన్ని భాగస్వామ్యం చేయండి",
     select_manually: "మాన్యువల్‌గా ఎంచుకోండి",
     identity_title: "గుర్తింపును ధృవీకరించండి",
-    biometric_btn: "బయోమెట్రిక్",
-    skip_btn: "ప్రస్తుతానికి వద్దు",
+    personal_info_title: "మీ గురించి చెప్పండి",
+    name_label: "పూర్తి పేరు",
+    dob_label: "పుట్టిన తేదీ"
   },
   'اردو': {
     title: "الیکشن معاون",
@@ -149,10 +174,22 @@ export const translations = {
     continue: "جاری رکھیں",
     share_location: "مقام شیئر کریں",
     select_manually: "دستی طور پر منتخب کریں",
-    identity_title: "شناخت की تصدیق کریں",
-    biometric_btn: "بایومیٹرک",
-    skip_btn: "ابھی چھوڑیں",
-  }
+    identity_title: "شناخت کی تصدیق کریں",
+    personal_info_title: "اپنے بارے میں بتائیں",
+    name_label: "پورا نام",
+    dob_label: "تاریخ پیدائش"
+  },
+  'बड़ो': { choose_language: "राव सायख" },
+  'डोगरी': { choose_language: "भाषा चुनो" },
+  'कॉशुर': { choose_language: "ज़بان चुनिव" },
+  'कोंकणी': { choose_language: "भास वेंचून काढा" },
+  'मैथिली': { choose_language: "भाषा चुनु" },
+  'ꯃꯤꯇꯩꯂꯣꯟ': { choose_language: "ꯂꯣꯟ ꯈꯜꯂꯨ" },
+  'নেपाली': { choose_language: "भाषा रोज्नुहोस्" },
+  'ଓଡ଼ିଆ': { choose_language: "ଭାଷା ବାଛନ୍ତୁ" },
+  'संस्कृतम्': { choose_language: "भाषाम् चिनोतु" },
+  'ᱥᱟᱱᱛᱟᱲᱤ': { choose_language: "ᱯᱟᱹᱨᱥᱤ ᱵᱟᱪᱷᱟᱣ" },
+  'सिन्धी': { choose_language: "ٻولي چونڊيو" }
 };
 
 const getSafeTranslation = (lang, key) => {
