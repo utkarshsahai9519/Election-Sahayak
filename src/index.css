@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg-primary: #f8fafc;
+    --text-primary: #1e293b;
+    --text-secondary: #475569;
+    --accent: #FF9933; /* Saffron */
+    --accent-glow: rgba(255, 153, 51, 0.4);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg-primary: #0f172a;
+      --text-primary: #f1f5f9;
+      --text-secondary: #cbd5e1;
+      --accent: #ffb366;
+      --accent-glow: rgba(255, 179, 102, 0.3);
+    }
+  }
+
+  body {
+    background-color: #fffaf0;
+    /* Rich Solid Tricolor Gradient */
+    background-image: 
+      linear-gradient(135deg, rgba(255, 153, 51, 0.1) 0%, rgba(255, 255, 255, 0.9) 50%, rgba(19, 136, 8, 0.1) 100%);
+    background-attachment: fixed;
+    position: relative;
+  }
+
+  /* Gods Doodle Pattern (WhatsApp Style) */
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.15;
+    z-index: -1;
+    pointer-events: none;
+    background-image: url("/bg-doodle.png");
+    background-repeat: repeat;
+    background-size: 400px; /* Adjust size to look like a doodle pattern */
+  }
+}
+
+@layer utilities {
+  .glass-panel {
+    @apply bg-white/90 dark:bg-slate-900/90 backdrop-blur-sm border border-white/40 dark:border-slate-700/60 shadow-xl;
+  }
+  
+  .glass-button {
+    @apply bg-white/80 dark:bg-slate-800/80 backdrop-blur-md border border-white/30 dark:border-slate-700/50 shadow-sm hover:shadow-md transition-all;
+  }
+
+  .tricolor-bar {
+    @apply h-1.5 w-full bg-gradient-to-r from-saffron-500 via-white to-indiagreen-500;
+  }
+}
