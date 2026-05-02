@@ -1,5 +1,5 @@
 {
-  "name": "temp-app",
+  "name": "election-sahayak",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -11,29 +11,33 @@
     "start": "node server.js"
   },
   "dependencies": {
-    "@google/generative-ai": "^0.21.0",
-    "cors": "^2.8.5",
-    "dotenv": "^16.4.5",
-    "express": "^4.21.1",
-    "lucide-react": "^0.460.0",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "react-router-dom": "^6.28.0"
+    "@google-cloud/vertexai": "^1.12.0",
+    "@google/genai": "^1.51.0",
+    "@google/generative-ai": "^0.24.1",
+    "clsx": "^2.1.1",
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "framer-motion": "^12.38.0",
+    "lucide-react": "^1.14.0",
+    "react": "^19.2.5",
+    "react-dom": "^19.2.5",
+    "react-router-dom": "^7.14.2",
+    "tailwind-merge": "^3.5.0"
   },
   "devDependencies": {
-    "@eslint/js": "^9.13.0",
-    "@types/react": "^18.3.12",
-    "@types/react-dom": "^18.3.1",
-    "@vitejs/plugin-react": "^4.3.3",
-    "autoprefixer": "^10.4.20",
-    "eslint": "^9.13.0",
-    "eslint-plugin-react": "^7.37.2",
-    "eslint-plugin-react-hooks": "^5.0.0",
-    "eslint-plugin-react-refresh": "^0.4.14",
-    "globals": "^15.11.0",
-    "postcss": "^8.4.47",
-    "tailwindcss": "^3.4.14",
-    "vite": "^5.4.10",
-    "vite-plugin-pwa": "^0.21.0"
+    "@eslint/js": "^10.0.1",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^6.0.1",
+    "autoprefixer": "^10.5.0",
+    "eslint": "^10.2.1",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "eslint-plugin-react-refresh": "^0.5.2",
+    "globals": "^17.5.0",
+    "postcss": "^8.5.13",
+    "tailwindcss": "^3.4.19",
+    "vite": "^8.0.10",
+    "vite-plugin-pwa": "^1.2.0"
   }
 }

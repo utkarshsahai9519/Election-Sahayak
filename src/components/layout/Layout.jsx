@@ -14,7 +14,7 @@ const Layout = () => {
           onClick={() => navigate('/step1')}
           className="flex items-center gap-3 hover:opacity-80 transition-opacity text-left cursor-pointer active:scale-95"
         >
-          <img src="/logo.png" alt="Election Sahayak Logo" className="h-10 w-10 min-w-[40px] object-contain" />
+          <img src="/logo.png" alt="Election Sahayak Logo" className="h-10 w-10 min-w-[40px] object-contain p-1 bg-white rounded-lg shadow-sm" />
           <h1 className="text-lg sm:text-xl font-extrabold text-slate-900 tracking-tight leading-tight">
             Election Sahayak
           </h1>
