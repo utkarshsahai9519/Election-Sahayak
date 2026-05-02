@@ -1,0 +1,207 @@
+{
+  "states": [
+    {
+      "name": "Andhra Pradesh",
+      "districts": [
+        { "name": "Visakhapatnam", "constituencies": ["Visakhapatnam East", "Visakhapatnam West", "Visakhapatnam North"] },
+        { "name": "Vijayawada", "constituencies": ["Vijayawada East", "Vijayawada West", "Vijayawada Central"] }
+      ]
+    },
+    {
+      "name": "Arunachal Pradesh",
+      "districts": [
+        { "name": "Itanagar", "constituencies": ["Itanagar"] },
+        { "name": "Tawang", "constituencies": ["Tawang", "Mukto"] }
+      ]
+    },
+    {
+      "name": "Assam",
+      "districts": [
+        { "name": "Kamrup Metropolitan", "constituencies": ["Guwahati East", "Guwahati West", "Dispur"] },
+        { "name": "Dibrugarh", "constituencies": ["Dibrugarh", "Moran"] }
+      ]
+    },
+    {
+      "name": "Bihar",
+      "districts": [
+        { "name": "Patna", "constituencies": ["Patna Sahib", "Kumhrar", "Bankipur"] },
+        { "name": "Gaya", "constituencies": ["Gaya Town", "Bodh Gaya"] }
+      ]
+    },
+    {
+      "name": "Chhattisgarh",
+      "districts": [
+        { "name": "Raipur", "constituencies": ["Raipur City South", "Raipur City North"] },
+        { "name": "Bilaspur", "constituencies": ["Bilaspur", "Bilha"] }
+      ]
+    },
+    {
+      "name": "Goa",
+      "districts": [
+        { "name": "North Goa", "constituencies": ["Panaji", "Mapusa"] },
+        { "name": "South Goa", "constituencies": ["Margao", "Ponda"] }
+      ]
+    },
+    {
+      "name": "Gujarat",
+      "districts": [
+        { "name": "Ahmedabad", "constituencies": ["Ellis Bridge", "Amraiwadi", "Dariapur"] },
+        { "name": "Surat", "constituencies": ["Surat East", "Surat West", "Majura"] }
+      ]
+    },
+    {
+      "name": "Haryana",
+      "districts": [
+        { "name": "Gurugram", "constituencies": ["Gurugram", "Badshahpur"] },
+        { "name": "Faridabad", "constituencies": ["Faridabad", "Ballabhgarh"] }
+      ]
+    },
+    {
+      "name": "Himachal Pradesh",
+      "districts": [
+        { "name": "Shimla", "constituencies": ["Shimla", "Shimla Rural"] },
+        { "name": "Kangra", "constituencies": ["Dharamshala", "Kangra"] }
+      ]
+    },
+    {
+      "name": "Jharkhand",
+      "districts": [
+        { "name": "Ranchi", "constituencies": ["Ranchi", "Hatia"] },
+        { "name": "East Singhbhum", "constituencies": ["Jamshedpur East", "Jamshedpur West"] }
+      ]
+    },
+    {
+      "name": "Karnataka",
+      "districts": [
+        { "name": "Bengaluru Urban", "constituencies": ["Shanti Nagar", "Jayanagar", "Malleshwaram"] },
+        { "name": "Mysuru", "constituencies": ["Chamaraja", "Krishnaraja"] }
+      ]
+    },
+    {
+      "name": "Kerala",
+      "districts": [
+        { "name": "Thiruvananthapuram", "constituencies": ["Vattiyoorkavu", "Nemom"] },
+        { "name": "Ernakulam", "constituencies": ["Kochi", "Ernakulam"] }
+      ]
+    },
+    {
+      "name": "Madhya Pradesh",
+      "districts": [
+        { "name": "Bhopal", "constituencies": ["Bhopal Madhya", "Bhopal South-West"] },
+        { "name": "Indore", "constituencies": ["Indore-1", "Indore-2", "Indore-3"] }
+      ]
+    },
+    {
+      "name": "Maharashtra",
+      "districts": [
+        { "name": "Mumbai City", "constituencies": ["Colaba", "Malabar Hill", "Worli"] },
+        { "name": "Pune", "constituencies": ["Kothrud", "Shivajinagar", "Pune Cantonment"] }
+      ]
+    },
+    {
+      "name": "Manipur",
+      "districts": [
+        { "name": "Imphal East", "constituencies": ["Khurai", "Wangkhei"] },
+        { "name": "Imphal West", "constituencies": ["Thangmeiband", "Uripok"] }
+      ]
+    },
+    {
+      "name": "Meghalaya",
+      "districts": [
+        { "name": "East Khasi Hills", "constituencies": ["Shillong North", "Shillong South"] },
+        { "name": "West Garo Hills", "constituencies": ["Tura"] }
+      ]
+    },
+    {
+      "name": "Mizoram",
+      "districts": [
+        { "name": "Aizawl", "constituencies": ["Aizawl North I", "Aizawl West I"] },
+        { "name": "Lunglei", "constituencies": ["Lunglei North", "Lunglei South"] }
+      ]
+    },
+    {
+      "name": "Nagaland",
+      "districts": [
+        { "name": "Kohima", "constituencies": ["Kohima Town", "Northern Angami I"] },
+        { "name": "Dimapur", "constituencies": ["Dimapur I", "Dimapur II"] }
+      ]
+    },
+    {
+      "name": "Odisha",
+      "districts": [
+        { "name": "Khurda", "constituencies": ["Bhubaneswar Central", "Bhubaneswar North"] },
+        { "name": "Cuttack", "constituencies": ["Cuttack City", "Barabati-Cuttack"] }
+      ]
+    },
+    {
+      "name": "Punjab",
+      "districts": [
+        { "name": "Amritsar", "constituencies": ["Amritsar East", "Amritsar West", "Amritsar Central"] },
+        { "name": "Ludhiana", "constituencies": ["Ludhiana East", "Ludhiana West"] }
+      ]
+    },
+    {
+      "name": "Rajasthan",
+      "districts": [
+        { "name": "Jaipur", "constituencies": ["Malviya Nagar", "Adarsh Nagar", "Civil Lines"] },
+        { "name": "Jodhpur", "constituencies": ["Sardarpura", "Jodhpur"] }
+      ]
+    },
+    {
+      "name": "Sikkim",
+      "districts": [
+        { "name": "Gangtok", "constituencies": ["Gangtok", "Upper Tadong"] },
+        { "name": "Namchi", "constituencies": ["Namchi-Singhithang"] }
+      ]
+    },
+    {
+      "name": "Tamil Nadu",
+      "districts": [
+        { "name": "Chennai", "constituencies": ["Mylapore", "Chepauk-Thiruvallikeni", "T. Nagar"] },
+        { "name": "Coimbatore", "constituencies": ["Coimbatore South", "Coimbatore North"] }
+      ]
+    },
+    {
+      "name": "Telangana",
+      "districts": [
+        { "name": "Hyderabad", "constituencies": ["Khairatabad", "Jubilee Hills", "Nampally"] },
+        { "name": "Warangal", "constituencies": ["Warangal East", "Warangal West"] }
+      ]
+    },
+    {
+      "name": "Tripura",
+      "districts": [
+        { "name": "West Tripura", "constituencies": ["Agartala", "Town Bordowali"] },
+        { "name": "Dhalai", "constituencies": ["Ambassa"] }
+      ]
+    },
+    {
+      "name": "Uttar Pradesh",
+      "districts": [
+        { "name": "Lucknow", "constituencies": ["Lucknow Central", "Lucknow East", "Lucknow West"] },
+        { "name": "Varanasi", "constituencies": ["Varanasi North", "Varanasi South", "Varanasi Cantt."] }
+      ]
+    },
+    {
+      "name": "Uttarakhand",
+      "districts": [
+        { "name": "Dehradun", "constituencies": ["Dehradun Cantt", "Rajpur Road"] },
+        { "name": "Nainital", "constituencies": ["Haldwani", "Nainital"] }
+      ]
+    },
+    {
+      "name": "West Bengal",
+      "districts": [
+        { "name": "Kolkata", "constituencies": ["Bhowanipore", "Ballygunge", "Jorasanko"] },
+        { "name": "North 24 Parganas", "constituencies": ["Bidhannagar", "Rajarhat Gopalpur"] }
+      ]
+    },
+    {
+      "name": "Delhi",
+      "districts": [
+        { "name": "New Delhi", "constituencies": ["New Delhi", "RK Puram"] },
+        { "name": "Central Delhi", "constituencies": ["Chandni Chowk", "Matia Mahal"] }
+      ]
+    }
+  ]
+}
