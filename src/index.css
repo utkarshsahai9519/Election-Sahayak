@@ -49,20 +49,21 @@
 
 @layer utilities {
   .glass-panel {
-    @apply dark:bg-slate-900/95 border shadow-md text-slate-800 dark:text-white;
+    @apply border shadow-md text-slate-900;
     background-color: rgba(255, 247, 237, 0.98); 
     backdrop-filter: none;
     border-color: rgba(255, 153, 51, 0.3); 
   }
   
   .glass-button {
-    @apply dark:bg-slate-800/90 border shadow-sm transition-all text-slate-800 dark:text-slate-200 font-semibold;
+    @apply border shadow-sm transition-all text-slate-800 font-bold;
     background-color: rgba(255, 255, 255, 0.95);
     border-color: rgba(255, 153, 51, 0.4);
   }
   
   .glass-button:hover {
     background-color: #ffedd5;
+    @apply text-slate-900;
   }
 
   .tricolor-bar {

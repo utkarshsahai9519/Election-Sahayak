@@ -8,7 +8,7 @@ const Step1_Language = () => {
 
   const languages = [
     'English', 'हिंदी', 'অসমীয়া', 'বাংলা', 'ગુજરાતી', 'ಕನ್ನಡ', 'മലയാളം', 'मराठी', 'ਪੰਜਾਬੀ', 'தமிழ்', 'తెలుగు', 'اردو',
-    'बड़ो', 'डोगरी', 'कॉशुर', 'कोंकणी', 'मैथिली', 'ꯃꯤꯇꯩꯂꯣꯟ', 'नेपाली', 'ଓଡ଼ିଆ', 'संस्कृतम्', 'ᱥᱟᱱᱛᱟᱲᱤ', 'सिन्धी'
+    'बड़ो', 'डोगरी', 'कॉशुर', 'कोंकणी', 'मैथिली', 'ꯃꯤꯇꯩꯂꯣꯟ', 'নেपाली', 'ଓଡ଼ିଆ', 'संस्कृतम्', 'ᱥᱟᱱᱛᱟᱲᱤ', 'सिन्धी'
   ];
 
   const handleLanguageSelect = (lang) => {
@@ -18,8 +18,8 @@ const Step1_Language = () => {
 
   return (
     <div className="w-full flex flex-col items-center animate-in fade-in slide-in-from-bottom-4 duration-500">
-      <h2 className="text-2xl font-bold mb-6 text-center text-slate-900 dark:text-white">{t.choose_language}</h2>
-      <p className="text-slate-600 dark:text-slate-300 mb-8 text-center">
+      <h2 className="text-2xl font-black mb-6 text-center text-slate-900">{t.choose_language}</h2>
+      <p className="text-slate-700 mb-8 text-center font-medium">
         {t.select_language_desc}
       </p>
       <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 w-full overflow-y-auto max-h-[400px] p-2 scrollbar-thin scrollbar-thumb-saffron-200">
