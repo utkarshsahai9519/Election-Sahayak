@@ -9,7 +9,7 @@ const Layout = () => {
   return (
     <div className="min-h-screen flex flex-col transition-colors duration-300">
       <div className="tricolor-bar"></div>
-      <header className="glass-panel sticky top-0 z-50 px-4 py-3 flex justify-between items-center border-b-2 border-navyblue-500">
+      <header className="glass-panel sticky top-0 z-50 px-4 py-3 flex justify-between items-center border-b-2 border-saffron-500">
         <button 
           onClick={() => navigate('/step1')}
           className="flex items-center gap-3 hover:opacity-80 transition-opacity text-left"
@@ -17,7 +17,7 @@ const Layout = () => {
           <div className="bg-white p-1 rounded-lg shadow-sm border border-slate-100">
             <img src="/logo.png" alt="Election Sahayak Logo" className="h-10 w-10 min-w-[40px] object-contain" />
           </div>
-          <h1 className="text-lg sm:text-xl font-extrabold text-navyblue-600 dark:text-navyblue-400 tracking-tight leading-tight">
+          <h1 className="text-lg sm:text-xl font-extrabold text-slate-800 dark:text-white tracking-tight leading-tight">
             Election Sahayak
           </h1>
         </button>
@@ -27,9 +27,9 @@ const Layout = () => {
         <Outlet />
       </main>
 
-      <footer className="p-4 text-center text-sm text-slate-500 dark:text-slate-400 flex flex-col items-center gap-2">
+      <footer className="p-4 text-center text-sm text-slate-500 dark:text-slate-400 flex flex-col items-center gap-2 border-t border-slate-100 dark:border-slate-800">
         <p className="text-xs italic opacity-75">{t.change_lang_guide}</p>
-        <div className="flex items-center gap-1 font-bold text-navyblue-600">
+        <div className="flex items-center gap-1 font-bold text-slate-400">
           <span>IND</span>
         </div>
         <div>&copy; {new Date().getFullYear()} Election Sahayak</div>
