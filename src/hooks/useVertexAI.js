@@ -1,4 +1,5 @@
 import { useState, useCallback } from 'react';
+import { GoogleGenerativeAI } from "@google/generative-ai";
 
 export const useVertexAI = () => {
   const [loading, setLoading] = useState(false);
@@ -7,27 +8,31 @@ export const useVertexAI = () => {
   const generateText = useCallback(async (prompt, locationContext = null) => {
     setLoading(true);
     setError(null);
-    const language = localStorage.getItem('electionSahayakLang') || 'English';
-    const userInfo = {
-      name: localStorage.getItem('electionSahayakName'),
-      dob: localStorage.getItem('electionSahayakDOB')
-    };
     
     try {
-      const response = await fetch('/api/chat', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ prompt, locationContext, language, userInfo })
-      });
-
-      if (!response.ok) {
-        throw new Error('Failed to generate response from server');
+      const apiKey = import.meta.env.VITE_GEMINI_API_KEY;
+      if (!apiKey) {
+        throw new Error("VITE_GEMINI_API_KEY is not configured");
       }
 
-      const data = await response.json();
+      const genAI = new GoogleGenerativeAI(apiKey);
+      // Switching to gemini-pro as gemini-1.5-flash is reporting NOT_FOUND on current endpoint
+      const model = genAI.getGenerativeModel({ 
+        model: "gemini-pro",
+        systemInstruction: `You are 'Election Sahayak', a highly respectful and helpful assistant for Indian citizens. 
+        You are an official guide grounded in the resources of the Election Commission of India (https://www.eci.gov.in).
+        Location: ${locationContext?.constituency || 'India'}, ${locationContext?.state || ''}.
+        Persona: Knowledgeable, patient, and polite Indian man. Neutral and non-political.`
+      });
+
+      const result = await model.generateContent(prompt);
+      const response = await result.response;
+      const text = response.text();
+      
       setLoading(false);
-      return data.text;
+      return text;
     } catch (err) {
+      console.error("Gemini AI Error:", err);
       setLoading(false);
       setError(err.message || 'An error occurred');
       throw err;
